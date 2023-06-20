@@ -44,16 +44,16 @@ confirmButton.addEventListener("click", function(){
 
             nombres.forEach(nombre => {
                 doc.addImage(imgData, 'JPEG', 0, 0, 297,210);
-                doc.setFontSize(40);
+                doc.setFontSize(30);
                 doc.text(nombre, 190,105, {align:'center'});
-                doc.setFontSize(20);
+                doc.setFontSize(15);
                 doc.text(folios[i], 250,12, {align:'center'});
                 i++;
                 doc.addPage();
             });
     
             
-            doc.save("ahuevo.pdf")
+            doc.save("certificados.pdf")
             /*workbook.SheetNames.forEach(sheet => {
                 let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
                 let jsonObject = JSON.stringify(rowObject);
